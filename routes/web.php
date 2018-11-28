@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-return view('welcome');
+return view('index');
 });
 
 
@@ -40,3 +40,7 @@ return view('pages.typography');
 Route::get('/widgets/', function () {
 return view('pages.widgets');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
